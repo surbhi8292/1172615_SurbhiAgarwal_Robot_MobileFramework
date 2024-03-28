@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231124 16:37:18.184" rpa="false" schemaversion="4">
+<suite id="s1" name="Testcases" source="C:\Users\surbhi.agarwal02\PycharmProjects\Demoproject\Resources\Tests\Testcases.robot">
+<test id="s1-t1" name="User verifies cart page" line="37">
+<kw name="Launch the Application" library="AppSettings">
+<doc>Main Keyword - Launch the application in cloud devices</doc>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=${APPIUM_SERVER}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICENAME}</arg>
+<arg>app=${APPNAME}</arg>
+<arg>sauce:username=${USERNAME}</arg>
+<arg>sauce:accessKey=${ACCESSKEY}</arg>
+<arg>autoAcceptAlerts=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20231124 16:37:19.981" endtime="20231124 16:37:35.867"/>
+</kw>
+<status status="PASS" starttime="20231124 16:37:19.980" endtime="20231124 16:37:35.868"/>
+</kw>
+<kw name="Login a user" library="Login">
+<arg>surbhi@gmail.com</arg>
+<arg>surbhi@</arg>
+<doc>Main Keyword - To login a user into app</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${Menu}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231124 16:37:38.904" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]
+xpath criteria: //android.widget.ImageView[@content-desc="More options"]
+xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<status status="PASS" starttime="20231124 16:37:35.868" endtime="20231124 16:37:38.913"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Menu}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:38.917" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg timestamp="20231124 16:37:41.882" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<status status="PASS" starttime="20231124 16:37:38.914" endtime="20231124 16:37:41.883"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Login}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:41.890" level="INFO">Clicking element '//android.widget.TextView[@text='Login']'.</msg>
+<msg timestamp="20231124 16:37:43.393" level="INFO">xpath criteria: //android.widget.TextView[@text='Login']</msg>
+<status status="PASS" starttime="20231124 16:37:41.883" endtime="20231124 16:37:43.394"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${MailField}</arg>
+<arg>${Usermail}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:43.400" level="INFO">Typing text 'surbhi@gmail.com' into text field '//android.widget.EditText[@text='Please enter your email id']'</msg>
+<msg timestamp="20231124 16:37:44.626" level="INFO">xpath criteria: //android.widget.EditText[@text='Please enter your email id']</msg>
+<status status="PASS" starttime="20231124 16:37:43.394" endtime="20231124 16:37:44.626"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${PasswrdField}</arg>
+<arg>${Userpasswrd}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:44.633" level="INFO">Typing text 'surbhi@' into text field '//android.widget.EditText[@text='Password']'</msg>
+<msg timestamp="20231124 16:37:46.128" level="INFO">xpath criteria: //android.widget.EditText[@text='Password']</msg>
+<status status="PASS" starttime="20231124 16:37:44.627" endtime="20231124 16:37:46.128"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:46.131" level="INFO">Clicking element 'btn_login_pg_login'.</msg>
+<msg timestamp="20231124 16:37:47.600" level="INFO">criteria is btn_login_pg_login</msg>
+<status status="PASS" starttime="20231124 16:37:46.128" endtime="20231124 16:37:47.600"/>
+</kw>
+<status status="PASS" starttime="20231124 16:37:35.868" endtime="20231124 16:37:47.600"/>
+</kw>
+<kw name="Verifies cart button in pdp" library="Cart">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${Searchbar}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231124 16:37:48.846" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/home_fk_like_search_bar</msg>
+<status status="PASS" starttime="20231124 16:37:47.601" endtime="20231124 16:37:48.847"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Searchbar}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:48.850" level="INFO">Clicking element 'com.multi_vendor.adyas.multivendor:id/home_fk_like_search_bar'.</msg>
+<msg timestamp="20231124 16:37:50.332" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/home_fk_like_search_bar</msg>
+<status status="PASS" starttime="20231124 16:37:48.847" endtime="20231124 16:37:50.332"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SearchField}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:50.335" level="INFO">Clicking element 'android:id/search_src_text'.</msg>
+<msg timestamp="20231124 16:37:51.924" level="INFO">criteria is android:id/search_src_text</msg>
+<status status="PASS" starttime="20231124 16:37:50.332" endtime="20231124 16:37:51.925"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${SearchField}</arg>
+<arg>iPhone 6s Plus</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:51.929" level="INFO">Typing text 'iPhone 6s Plus' into text field 'android:id/search_src_text'</msg>
+<msg timestamp="20231124 16:37:52.547" level="INFO">criteria is android:id/search_src_text</msg>
+<status status="PASS" starttime="20231124 16:37:51.925" endtime="20231124 16:37:52.547"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20231124 16:37:52.548" endtime="20231124 16:37:53.530"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${iPhone}</arg>
+<arg>2s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231124 16:37:55.422" level="INFO">criteria is category_special_price_sp</msg>
+<status status="PASS" starttime="20231124 16:37:53.531" endtime="20231124 16:37:55.422"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- ||</arg>
+<arg>The item is visible</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:37:55.424" endtime="20231124 16:37:55.424"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${iPhone}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:55.428" level="INFO">Clicking element 'category_special_price_sp'.</msg>
+<msg timestamp="20231124 16:37:56.621" level="INFO">criteria is category_special_price_sp</msg>
+<status status="PASS" starttime="20231124 16:37:55.424" endtime="20231124 16:37:56.621"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- ||</arg>
+<arg>Product details is visible</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:37:56.621" endtime="20231124 16:37:56.621"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>492</arg>
+<arg>1860</arg>
+<arg>572</arg>
+<arg>668</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20231124 16:37:56.622" endtime="20231124 16:37:58.220"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${Cartbutton}</arg>
+<arg>2s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231124 16:37:59.841" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/product_detail_add_to_cart</msg>
+<status status="PASS" starttime="20231124 16:37:58.221" endtime="20231124 16:37:59.842"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Cartbutton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:37:59.845" level="INFO">Clicking element 'com.multi_vendor.adyas.multivendor:id/product_detail_add_to_cart'.</msg>
+<msg timestamp="20231124 16:38:00.614" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/product_detail_add_to_cart</msg>
+<status status="PASS" starttime="20231124 16:37:59.842" endtime="20231124 16:38:00.614"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- ||</arg>
+<arg>The item is added to cart</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:38:00.614" endtime="20231124 16:38:00.615"/>
+</kw>
+<status status="PASS" starttime="20231124 16:37:47.600" endtime="20231124 16:38:00.615"/>
+</kw>
+<kw name="Verify cart page" library="Cart">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Carticon}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231124 16:38:00.619" level="INFO">Clicking element 'com.multi_vendor.adyas.multivendor:id/cart_image_view'.</msg>
+<msg timestamp="20231124 16:38:02.878" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/cart_image_view</msg>
+<status status="PASS" starttime="20231124 16:38:00.616" endtime="20231124 16:38:02.879"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product title}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20231124 16:38:03.223" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/cart_product_title</msg>
+<status status="PASS" starttime="20231124 16:38:02.879" endtime="20231124 16:38:03.223"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Product title}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20231124 16:38:03.541" level="INFO">Current page contains element 'com.multi_vendor.adyas.multivendor:id/cart_product_title'.</msg>
+<msg timestamp="20231124 16:38:03.541" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/cart_product_title</msg>
+<status status="PASS" starttime="20231124 16:38:03.223" endtime="20231124 16:38:03.541"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- || cart contains the item</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:38:03.541" endtime="20231124 16:38:03.541"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Product price}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20231124 16:38:03.852" level="INFO">Current page contains element 'com.multi_vendor.adyas.multivendor:id/cart_product_price'.</msg>
+<msg timestamp="20231124 16:38:03.852" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/cart_product_price</msg>
+<status status="PASS" starttime="20231124 16:38:03.543" endtime="20231124 16:38:03.852"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- || cart has value</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:38:03.853" endtime="20231124 16:38:03.853"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Cart value}</var>
+<arg>${Total value}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20231124 16:38:04.504" level="INFO">Element '//android.widget.TextView[@text='Total']' text is 'Total' </msg>
+<msg timestamp="20231124 16:38:04.504" level="INFO">xpath criteria: //android.widget.TextView[@text='Total']</msg>
+<msg timestamp="20231124 16:38:04.504" level="INFO">${Cart value} = Total</msg>
+<status status="PASS" starttime="20231124 16:38:03.853" endtime="20231124 16:38:04.504"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Cart amt}</var>
+<arg>${Total amt}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20231124 16:38:05.127" level="INFO">Element '//android.widget.TextView[@text='$365.00']' text is '$365.00' </msg>
+<msg timestamp="20231124 16:38:05.127" level="INFO">xpath criteria: //android.widget.TextView[@text='$365.00']</msg>
+<msg timestamp="20231124 16:38:05.127" level="INFO">${Cart amt} = $365.00</msg>
+<status status="PASS" starttime="20231124 16:38:04.505" endtime="20231124 16:38:05.127"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>@{Cartdetails}</var>
+<arg>The</arg>
+<arg>${Cart value} is : ${Cart amt}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231124 16:38:05.128" level="INFO">@{Cartdetails} = [ The | Total is : $365.00 ]</msg>
+<status status="PASS" starttime="20231124 16:38:05.128" endtime="20231124 16:38:05.128"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- || ${Cartdetails}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:38:05.128" endtime="20231124 16:38:05.129"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Checkout}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20231124 16:38:05.475" level="INFO">Current page contains element 'com.multi_vendor.adyas.multivendor:id/cart_check_out'.</msg>
+<msg timestamp="20231124 16:38:05.475" level="INFO">criteria is com.multi_vendor.adyas.multivendor:id/cart_check_out</msg>
+<status status="PASS" starttime="20231124 16:38:05.129" endtime="20231124 16:38:05.476"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>|| --------------- || user is navigated to checkout</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 16:38:05.476" endtime="20231124 16:38:05.477"/>
+</kw>
+<status status="PASS" starttime="20231124 16:38:00.615" endtime="20231124 16:38:05.477"/>
+</kw>
+<kw name="Close the app" library="AppSettings" type="TEARDOWN">
+<doc>Main Keyword - By Close App keyword application will close</doc>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20231124 16:38:05.478" endtime="20231124 16:38:06.420"/>
+</kw>
+<status status="PASS" starttime="20231124 16:38:05.477" endtime="20231124 16:38:06.420"/>
+</kw>
+<status status="PASS" starttime="20231124 16:37:19.979" endtime="20231124 16:38:06.420"/>
+</test>
+<doc>Retail Demo Appplication</doc>
+<status status="PASS" starttime="20231124 16:37:18.191" endtime="20231124 16:38:06.421"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231124 16:37:19.196" level="WARN">Imported resource file 'C:\Users\surbhi.agarwal02\PycharmProjects\Demoproject\Resources\PageVariables\Locators.robot' is empty.</msg>
+</errors>
+</robot>
